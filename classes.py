@@ -51,7 +51,7 @@ class Library:
         """
         self.data_file = data_file
         self._books: List[Book] = []
-        self.load_books() # Uygulama başladığında kitapları yükle
+        self.load_books() 
 
     @property
     def books(self) -> List[Book]:
@@ -65,7 +65,7 @@ class Library:
             bool: Yükleme başarılıysa True, aksi takdirde False.
         """
         if not os.path.exists(self.data_file):
-            # Dosya yoksa, boş bir liste ile başla ve hata döndürme
+            
             self._books = []
             return False
         
@@ -78,7 +78,7 @@ class Library:
             print(f"Hata: {self.data_file} dosyası bozuk veya boş. Yeni bir dosya oluşturulacak.")
             self._books = [] # Dosya bozuksa, boş liste ile başla
             return False
-        except FileNotFoundError: # Bu aslında os.path.exists kontrolü nedeniyle buraya gelmemeli
+        except FileNotFoundError: 
             self._books = []
             return False
         except Exception as e:
@@ -159,7 +159,7 @@ class Library:
                 data = response.json()
 
             title = data.get('title')
-            authors_list = data.get('authors') # Bu bir liste veya None olabilir
+            authors_list = data.get('authors') 
             
             author_names = "Bilinmiyor"
             if authors_list:
@@ -307,3 +307,4 @@ class Library:
         self.save_books()
         print("Kütüphanedeki tüm kitaplar silindi.")
         return True
+
