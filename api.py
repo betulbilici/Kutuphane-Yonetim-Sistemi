@@ -95,6 +95,5 @@ async def remove_book(isbn: str):
         # Eğer kitap bulunamazsa 'remove_book' False döndürür.
         raise HTTPException(status_code=404, detail=f"ISBN '{isbn}' numaralı kitap kütüphanede bulunamadı.")
     
-    # HTTP 204 No Content (İçerik Yok) yanıtı, başarılı bir silme işleminden sonra yaygın olarak kullanılır.
-    # Bu yanıt, istemciye işlemin başarılı olduğunu ancak yanıt gövdesinde geri dönecek bir içerik olmadığını bildirir.
     return
+
