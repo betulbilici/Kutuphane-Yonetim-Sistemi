@@ -102,23 +102,3 @@ veya belirli bir test dosyasını çalıştırmak için:
 pytest test_book_manager.py
 pytest test_api.py
 
-Bonus: Commit Geçmişi Önerisi
-Projenin geliştirme aşamalarını yansıtmak için anlamlı commit mesajları kullanılması önerilir. Örneğin:
-
-"Aşama 1: Book ve Library sınıfları oluşturuldu"
-
-"Aşama 1: main.py terminal uygulaması eklendi"
-
-"Aşama 1: Pytest için temel testler yazıldı"
-
-"Aşama 2: httpx ve Open Library API entegrasyonu tamamlandı"
-
-"Aşama 2: API hata yönetimi eklendi"
-
-"Aşama 2: API entegrasyonu için testler güncellendi"
-
-"Aşama 3: FastAPI uygulaması ve temel endpointler oluşturuldu"
-
-"Aşama 3: Pydantic modelleri ve API testleri eklendi"
-
-"requirements.txt ve README.md güncellendi"
