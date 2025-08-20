@@ -42,7 +42,7 @@ def remove_book_menu(library: Library):
     """Kullanıcıdan ISBN alarak kitap siler."""
     isbn = input("\nSilinecek kitabın ISBN numarasını girin: ").strip()
     if isbn:
-        book = library.find_book(isbn) # find_book kendi mesajını basar
+        book = library.find_book(isbn) 
         if book:
             print(f"Silinecek kitap: {book}")
             confirm = input("Bu kitabı silmek istediğinizden emin misiniz? (e/h): ").lower()
@@ -51,7 +51,6 @@ def remove_book_menu(library: Library):
             else:
                 print("Silme işlemi iptal edildi.")
         else:
-            # find_book zaten "bulunamadı" mesajı bastığı için burada ek basmaya gerek yok
             pass
     else:
         print("Geçersiz ISBN!")
@@ -60,7 +59,7 @@ def search_book_isbn_menu(library: Library):
     """Kullanıcıdan ISBN alarak kitap arar."""
     isbn = input("\nAranacak kitabın ISBN numarasını girin: ").strip()
     if isbn:
-        library.find_book(isbn) # find_book kendi mesajını basar
+        library.find_book(isbn) 
     else:
         print("Geçersiz ISBN!")
 
@@ -68,7 +67,7 @@ def search_book_text_menu(library: Library):
     """Kullanıcıdan arama terimi alarak başlık veya yazara göre kitap arar."""
     query = input("\nArama terimi girin (başlık veya yazar): ").strip()
     if query:
-        library.search_books(query) # search_books kendi mesajını basar
+        library.search_books(query) 
     else:
         print("Geçersiz arama terimi!")
 
@@ -99,22 +98,22 @@ async def main():
     while True:
         try:
             display_menu()
-            choice = input("Seçiminizi yapın (1-8): ").strip() # Menü seçeneği sayısı güncellendi
+            choice = input("Seçiminizi yapın (1-8): ").strip() 
             if choice == '1':
-                await add_book_from_api_menu(library) # API'den ekle
+                await add_book_from_api_menu(library) 
             elif choice == '2':
-                add_book_manual_menu(library)        # Manuel ekle
+                add_book_manual_menu(library)        
             elif choice == '3':
                 remove_book_menu(library)
-            elif choice == '4': # Yeni sıra
+            elif choice == '4': 
                 library.list_books()
-            elif choice == '5': # Yeni sıra
+            elif choice == '5': 
                 search_book_isbn_menu(library)
-            elif choice == '6': # Yeni sıra
+            elif choice == '6': 
                 search_book_text_menu(library)
-            elif choice == '7': # Yeni sıra
+            elif choice == '7': 
                 show_statistics(library)
-            elif choice == '8': # Yeni sıra
+            elif choice == '8': 
                 print("Çıkış yapılıyor...")
                 break
             else:
@@ -125,3 +124,4 @@ async def main():
 if __name__ == "__main__":
     # main fonksiyonunu eşzamansız olarak çalıştırır
     asyncio.run(main())
+
