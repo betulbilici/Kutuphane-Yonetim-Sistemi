@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Book to Delete",
+        "author": "Author",
+        "isbn": "978-0451524935"
+    },
+    {
+        "title": "deneme",
+        "author": "xx",
+        "isbn": "987456"
+    },
+    {
+        "title": "deneme2",
+        "author": "xx",
+        "isbn": "987654"
+    },
+    {
+        "title": "Fantastic Mr. Fox",
+        "author": "Roald Dahl",
+        "isbn": "9780140328721"
+    },
+    {
+        "title": "I'm a frog!",
+        "author": "Bilinmiyor",
+        "isbn": "9781338230420"
+    }
+]
